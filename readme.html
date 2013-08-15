@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Customize-Images</title>
+	<style type="text/css">
+		body {
+			background-color: #fff;
+			text-align: center;
+			color: #444;
+			font-family: Arial;
+			font-size: 10pt;
+		}
+		#container {
+			margin: 0 auto;
+			background-color: #f1f1f1;
+			width: 50%;
+			min-width: 800px;
+			max-width: 1000px;
+			text-align: left;
+			padding: 10px 40px 60px 40px;
+			line-height: 20px;
+		}
+		a {
+			color: #444;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<h1>Customize-Images</h1>
+	<h2>Info</h2>
+	<table>
+		<tr>
+			<td>Name</td>
+			<td>Customize-Images</td>
+		</tr>
+		<tr>
+			<td>Task</td>
+			<td>Image Crop & Cut with Caching</td>
+		</tr>
+		<tr>
+			<td>Version</td>
+			<td>1.2</td>
+		</tr>
+		<tr>
+			<td>Date</td>
+			<td>2013</td>
+		</tr>
+		<tr>
+			<td>Author</td>
+			<td>Dario D. Müller</td>
+		</tr>
+		<tr>
+			<td>Mail</td>
+			<td>mailme@dariodomi.de</td>
+		</tr>
+		<tr>
+			<td>Homepage</td>
+			<td><a href="http://dariodomi.de">http://dariodomi.de</a></td>
+		</tr>
+		<tr>
+			<td>GitHub</td>
+			<td><a href="https://github.com/DarioDomiDE">https://github.com/DarioDomiDE</a></td>
+		</tr>
+		<tr>
+			<td>Copyright</td>
+			<td>(c) 2013 by Dario D. Müller</td>
+		</tr>
+	</table>
+	
+	<h2>Installation</h2>
+	<p>All files: .htaccess, index.php, class.customize-images.php and files-Folder<br />
+	Copy the whole folder including all files to your webserver or localhost.<br />
+	Visit in your browser: <i>http://localhost/Customize-Images/files/testimage_w450_h250_c.jpg</i></p>
+	
+	<h2>How to use</h2>
+	<p>This Project make access to images with direct build-in croping and scaling of files<br />
+	It also represents a caching-functionality of the cropped & sliced images<br />
+	Access to an Image as usual "domain.com/files/[custom-path]/filename.jpg"<br />
+	All files (".htaccess" & php-files) can stored in directory "files/"</p>
+	
+	<h2>Browse to an image</h2>
+	<table>
+		<tr>
+			<td>/path/imagename.jpg</td>
+			<td>(get image with original width & height)</td>
+		</tr>
+		<tr>
+			<td>/path/imagename_w400.jpg</td>
+			<td>(get image with reduced width=400px)</td>
+		</tr>
+		<tr>
+			<td>/path/imagename_h250.jpg</td>
+			<td>(get image with reduced height=250px)</td>
+		</tr>
+		<tr>
+			<td>/path/imagename_w400_h250.jpg</td>
+			<td>(get image with width=400px and height=250px)</td>
+		</tr>
+		<tr>
+			<td>/path/imagename_h250_w400_c.jpg</td>
+			<td>(select available mode = crop)</td>
+		</tr>
+		<tr>
+			<td>/path/imagename_h250_w500_d.jpg</td>
+			<td>(select available mode = distort)</td>
+		</tr>
+		<tr>
+			<td>/path/imagename_h250_w600_s.jpg</td>
+			<td>(select available mode = scale)</td>
+		</tr>
+		<tr>
+			<td>/path/imagename_w600.jpg?dev</tr>
+			<td>(caching is disabled if $env is 'DEV')</td>
+		</tr>
+	</table>
+	
+	<h2>Mode</h2>
+	<p>One Param of Filename can be a one-char string who set on of these Modes</p>
+	<p><i>* crop- & distort-Modes requires both params (width and height)!</i></p>
+	<ul>
+		<li>s -> scale (scaling: use width und height as max-values, maintain proportions, requires only one length-param)</li>
+		<li>c -> crop (cropping: accept output data width and height, maintain proportions, cut too much of the scene)</li>
+		<li>d -> distort (distortion: use exactly width and height values)</li>
+	</ul>
+	
+	<h2>Inspiration: Adaptive-Images</h2>
+	<table>
+		<tr>
+			<td>Version</td>
+			<td>1.5.2</td>
+		</tr>
+		<tr>
+			<td>Homepage</td>
+			<td>http://adaptive-images.com</td>
+		</tr>
+		<tr>
+			<td>GitHub</td>
+			<td>https://github.com/MattWilcox/Adaptive-Images</td>
+		</tr>
+	</table>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Customize-Images by Dario D. Müller
+
+<IfModule mod_rewrite.c>
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !ai-cache
+RewriteRule \.(?:jpe?g|gif|png)$ index.php
+</IfModule>
